@@ -41,7 +41,7 @@
                     $('#saveDownloadUrl@(randomNumber)').attr('disabled', false);
                 },                               
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert('Failed to save download object.');
+                    $("#saveDownloadUrlAlert").click();
                     $('#saveDownloadUrl@(randomNumber)').attr('disabled', false);
                 }
             });
@@ -201,5 +201,5 @@
         </div>
     </div>
 </div>
-
+<nop-alert asp-alert-id="saveDownloadUrlAlert" asp-alert-message="Admin.Download.SaveDownloadURL.Alert.FailedSave" />
 

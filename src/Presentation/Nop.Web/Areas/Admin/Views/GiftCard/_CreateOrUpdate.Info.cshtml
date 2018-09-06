@@ -99,8 +99,8 @@
                                             success: function(data) {
                                                 $('#@Html.IdFor(model => model.GiftCardCouponCode)').val(data.CouponCode);
                                             },
-                                            error: function(xhr, ajaxOptions, thrownError) {
-                                                alert('Failed to generate code.');
+                                            error: function(xhr, ajaxOptions, thrownError) {                                                
+                                                $("#generateCouponCodeFailed").click();
                                             }
                                         });
                                     });
@@ -190,3 +190,4 @@
     </div>
     @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.GiftCardDetailsInfoBottom, additionalData = Model })
 </div>
+<nop-alert asp-alert-id="generateCouponCodeFailed" asp-alert-message="Admin.GiftCards.Fields.GiftCardCouponCode.Alert.FailedGenerate" />

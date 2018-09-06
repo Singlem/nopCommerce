@@ -207,7 +207,7 @@
                             $('#addRewardPoints').attr('disabled', false);
                         },
                         error:function (xhr, ajaxOptions, thrownError){
-                            alert('Failed to add reward points.');
+                            $("#rewardPointsHistoryAddAlert").click();
                             $('#addRewardPoints').attr('disabled', false);
                         }
                     });
@@ -224,3 +224,4 @@
     </div>
     @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.CustomerDetailsRewardPointsBottom, additionalData = Model })
 </div>
+<nop-alert asp-alert-id="rewardPointsHistoryAddAlert" asp-alert-message="Admin.Customers.Customers.RewardPoints.Alert.HistoryAdd" />

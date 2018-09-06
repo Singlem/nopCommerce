@@ -150,7 +150,7 @@
                     }
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert('Failed to load statistics.');
+                    $("#loadOrderStatisticsAlert").click();
                 }
             });
         }
@@ -171,3 +171,4 @@
         }
     });
 </script>
+<nop-alert asp-alert-id="loadOrderStatisticsAlert" asp-alert-message="Admin.SalesReport.OrderStatistics.Alert.FailedLoad" />

@@ -332,7 +332,7 @@
                                     });
                                 },
                                 error: function(xhr, ajaxOptions, thrownError) {
-                                    alert('Failed to retrieve states.');
+                                    $("#statesAlert").click();
                                 }
                             });
                         });
@@ -460,6 +460,7 @@
 <form asp-controller="Order" asp-action="PdfPackagingSlipSelected" method="post" id="pdf-packaging-slip-selected-form">
     <input type="hidden" id="selectedIds" name="selectedIds" value="" />
 </form>
+<nop-alert asp-alert-id="statesAlert" asp-alert-message="Admin.Common.Alert.States.Failed" />
 
 <script>
                 $(document).ready(function () {
