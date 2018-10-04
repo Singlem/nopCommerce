@@ -6,7 +6,7 @@ declare @resources xml
 set @resources='
 <Language> 
   <LocaleResource Name="Admin.Common.Alert">
-    <Value>ERROR</Value>
+    <Value>Information</Value>
   </LocaleResource>  
   <LocaleResource Name="Admin.Common.Ok">
     <Value>Ok</Value>
@@ -79,7 +79,19 @@ set @resources='
   </LocaleResource> 
   <LocaleResource Name="Admin.Catalog.Products.SpecificationAttributes.NoAttributeOptions">
     <Value></Value>
-  </LocaleResource> 
+  </LocaleResource>
+  <LocaleResource Name="Admin.Promotions.Discounts.Requirements.FailedToSave">
+    <Value>Failed to save discount requirements.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Alert.Save.Error">
+    <Value>Error while saving.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Alert.Save.Ok">
+    <Value>Successfully saved.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Common.Alert.Add.Error">
+    <Value>Failed to add record.</Value>
+  </LocaleResource>
 </Language>
 '
 
