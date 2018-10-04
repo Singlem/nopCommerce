@@ -99,8 +99,9 @@
                                             success: function(data) {
                                                 $('#@Html.IdFor(model => model.GiftCardCouponCode)').val(data.CouponCode);
                                             },
-                                            error: function(xhr, ajaxOptions, thrownError) {                                                
-                                                $("#generateCouponCodeFailed").click();
+                                            error: function (xhr, ajaxOptions, thrownError) {
+                                                $('#generateCouponCodeFailed-info').html(thrownError);
+                                                $("#generateCouponCodeFailed").click();                                                
                                             }
                                         });
                                     });
